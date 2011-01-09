@@ -1,0 +1,81 @@
+.guestbook li {
+  border-top: 1px #36393A solid;
+  border-top: 1px rgba(white, 0.05) solid;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.guestbook ol {
+  clear: both;
+}
+
+.guestbook h3 {
+  font-weight: 400;
+}
+
+.guestbook form {
+  border-top: 1px #36393A solid;
+  border-top: 1px rgba(white, 0.05) solid;
+  margin-top: 20px;
+  padding: 20px 30px 0 40px;
+  overflow: hidden;
+}
+
+.guestbook input,
+.guestbook textarea {
+  background: #5E6567;
+  background: rgba(white, 0.05);
+  border: 1px #36393A solid;
+  border: 1px rgba(white, 0.1) solid;
+  color: white;
+  float: left;
+  margin: 0 10px 10px 0;
+  padding: 3px;
+  width: 292px;
+  @include border-radius(1px);
+}
+
+.guestbook .placeholder {
+  color: rgba(white, 0.5);;
+}
+
+.guestbook input:focus,
+.guestbook textarea:focus {
+  background: rgba(white, 0.1);
+  border-color: rgba(white, 0.15);
+  outline: none;
+  @include box-shadow(rgba(white, 0.1) 0 0 5px);
+}
+
+.guestbook input[name="headline"] {
+  font-weight: 400;
+}
+
+.guestbook input[name="headline"],
+.guestbook textarea {
+  width: 912px;
+}
+
+.guestbook textarea {
+  height: 42px;
+}
+
+button {
+  background: #232728;
+  border: 1px #0B0B0C solid;
+  background: rgba(black, 0.05);
+  border: 1px rgba(black, 0.1) solid;
+  color: white;
+  cursor: pointer;
+  float: left;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 15px;
+  @include border-radius(1px);
+}
+
+button:hover {
+  background: rgba(black, 0.1);
+  border: 1px rgba(black, 0.15) solid;
+  @include box-shadow(rgba(white, 0.1) 0 0 5px);
+}

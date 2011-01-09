@@ -1,0 +1,56 @@
+<?php
+  if (isset($_POST["name"]) && isset($_POST["comment"]) && isset($_POST["headline"]))
+  {
+    $write = fopen("../../data/guestbook.txt", "a");
+    fwrite($write, $_POST["name"] . "\r\n");
+    fwrite($write, $_POST["email"] . "\r\n");
+    fwrite($write, $_POST["website"] . "\r\n");
+    fwrite($write, $_POST["headline"] . "\r\n");
+    fwrite($write, time() . "\r\n");
+    fwrite($write, $_POST["comment"] . "\r\n");
+    fwrite($write, "#" . "\r\n");
+    fclose($write);
+  }
+  function file_get_contents_utf8($fn) { 
+    $content = file_get_contents($fn); 
+    return mb_convert_encoding($content, 'ISO-8859-1', 'UTF-8'); 
+  }
+?>
+<div class="guestbook">
+  <h1>Guestbook</h1>
+  <%= partial "guestbook_form" %>
+  <ol>
+    <?php
+    
+      $entries = file_get_contents_utf8("../../data/guestbook.txt");
+      $entries = preg_split('/#(\r\n|\n|\r)/ms', "$entries");	
+      for ($i = count($entries) - 1; $i >= 0; $i--) {
+        $entry2 = $entries[$i];
+        if (strlen(trim($entry2)) != 0) {
+          $entry = preg_split('/(\r\n|\n|\r)/ms', $entry2);
+          $title = htmlentities(trim($entry[3]));
+          $name = htmlentities(trim($entry[0]));
+          $link = htmlentities(trim($entry[2]));
+          $date = date("l Y/d/m", $entry[4]) . ', ' . date("h:i", $entry[4]);
+          $comment = str_replace("\n", '<br>', htmlentities(trim(join("\n", array_slice($entry, 5)))));
+          if (preg_match('#[-a-z0-9]+\.[-a-z0-9]+#i', $link)) {
+            if (!preg_match('#^http://#i', $link)) {
+              $link = "http://$link";
+            }
+            $name = "<a href=\"$link\">$name</a>";
+          }
+          if ($title && $name && $comment) {
+            ?>
+              <li>
+                <h3><?= $title ?></h3>
+                <p>By <?= $name ?> (<?= $date ?>)</p>
+                <p><?= $comment ?></p>
+              </li>
+            <?
+          }
+        }
+      }
+    ?>
+  </ol>
+  <%= partial "guestbook_form" %>
+</div>

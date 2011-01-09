@@ -1,3 +1,32 @@
 a {
-  @include hover-link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff !important;
+}
+
+#content a {
+  color: #c8c8c8;
+}
+
+.links {
+  border-bottom: 1px #36393A solid;
+  border-bottom: 1px rgba(white, 0.05) solid;
+  border-top: 1px #36393A solid;
+  border-top: 1px rgba(white, 0.05) solid;
+  float: left;
+  padding: 82px 0;
+  width: 50%;
+}
+
+.links dt,
+.links dd {
+  float: left;
+  padding: 5px;
+  width: 240px;
+}
+
+.links dt {
+  text-align: right;
 }

@@ -1,0 +1,44 @@
+.about {
+  border-bottom: 1px #4f5050 solid;
+  border-bottom-color: rgba(white, 0.05);
+  border-top: 1px #4f5050 solid;
+  border-top-color: rgba(white, 0.05);
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.about-photo img {
+  vertical-align: bottom;
+}
+
+.about-text p {
+  margin: 0 0 10px;
+}
+
+.about-info {
+  float: left;
+  margin: 15px 0 0 40px;
+  width: 210px;
+}
+
+.about-info:first-child {
+  width: 460px;
+}
+
+.about-info h3 {
+  color: #a0a0a0;
+  font-weight: 400;
+  padding-right: 0.3em;
+  margin: 0 0 0.5em;
+}
+
+.about-info li {
+  list-style-type: none;
+  margin: 0 0 0 10px;
+}
+
+.about-info li:before {
+  content: "–";
+  margin-left: -10px;
+  position: absolute;
+}

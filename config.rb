@@ -35,4 +35,18 @@ helpers do
       "s=document.createElement('script');s.src='#{src}';document.getElementsByTagName('HEAD')[0].appendChild(s)"
     end.join(';')
   end
+  
+  def portfolio_thumb(src, title = nil, options = {})
+    request.env['REQUEST_URI'] =~ %r(^/([\w_-]+))
+    view = $1
+    thumb = "#{view}/thumbs/#{src}";
+    if src =~ /\.(mov)$/
+      options[:class] = 'quicktime';
+      thumb.gsub! '.mov', '.jpg'
+    end
+    if title
+      options[:title] = title
+    end
+    link_to(image_tag(thumb), "images/#{view}/#{src}", options)
+  end
 end

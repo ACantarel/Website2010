@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>André Cantarel</title>
+    <link rel="stylesheet" href="stylesheets/cantarel.css">
+    <script src="http://use.typekit.com/hjh2mae.js"></script>
+    <script>for(var e,l='article aside figcaption figure footer header nav section time'.split(' ');e=l.pop();document.createElement(e));try{Typekit.load()}catch(e){};onload=function(){<%= javascripts(:cantarel) %>}<%= %Q(var ol=function(){#{compress_javascript(javascript)}}) if javascript = @javascript %></script>
+  </head>
+  <body class="webkit">
+    <div id="page">
+      <header>
+        <nav>
+          <%= link_to("Home", ".") %>
+          <%= link_to("Blog", "blog") %>
+          <%= link_to("Commercial Work", "commercialwork") %>
+          <%= link_to("Personal Work", "personalwork") %>
+          <%= link_to("About", "about") %>
+          <%= link_to("Guestbook", "guestbook") %>
+          <%= link_to("Contact", "contact") %>
+          <%= link_to("Links", "links") %>
+        </nav>
+      </header>
+      <article>
+        <div id="content">
+          <%= yield %>
+        </div>
+      </article>
+      <footer>
+      
+      </footer>
+    </div>
+  </body>
+</html>

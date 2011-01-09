@@ -1,88 +1,34 @@
-.base-font {
-  font-family: $base-font-family;
+body,
+button {
+  color: #808080;
+  font-family: "facitweb-1", "facitweb-2", Tahoma, Verdana, "Vera Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 200;
 }
 
-.headline-font {
-  font-family: $headline-font-family;
+h1,
+#email {
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin: 25px 0 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.bold {
-  font-weight: bold;
+h2 {
+  color: #a0a0a0;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 40px 0;
+  text-transform: uppercase;
 }
 
-.normal {
-  font-weight: normal;
-}
-
-.s {
-  line-height: 20px;
-  @include font-size($base-font-size);
-}
-
-.m {
-  line-height: 20px;
-  @include font-size($base-font-size);
-}
-
-.l {
-  line-height: 30px;
-  @include font-size($large-font-size);
-}
-
-.xl {
-  line-height: 40px;
-  @include font-size($x-large-font-size);
-}
-
-.paragraph {
-  @extend .base-font;
-  @extend .m;
-  margin: 1em 0;
-}
-
-.headline {
-  @extend .headline-font;
-  @extend .bold; 
-  margin: 1em 0;
-}
-
-body {
-  @include font-smoothing;
-}
-
-strong,
-em {
-  @extend .bold;
+h3 {
+  font-weight: 400;
+  margin: 0 40px 15px;
 }
 
 p {
-  @extend .paragraph;
-}
-
-h1 {
-  @extend .headline;
-  @extend .xl;
-}
-
-h2,
-legend {
-  @extend .headline;
-  @extend .l;
-}
-
-h3,
-h4 {
-  @extend .headline;
-  @extend .m;
-}
-
-time {
-  @extend .paragraph;
-}
-
-article {
-  ol,
-  ul {
-    @extend .paragraph;
-  }
+  margin: 10px 40px;
 }

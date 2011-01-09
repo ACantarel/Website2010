@@ -5,14 +5,15 @@
 
 // External plugins e. g. jQuery plugins
 
-//@import "vendor/plugin-name";
+@import "vendor/fancybox";
 
 // Base colors and sizes
 
 $primary-color: #aaa;
 $secondary-color: #bbb;
 $font-color: #444;
-$link-color: #3F7D99;
+$link-color: #c8c8c8;
+$link-hover-color: #fff;
 
 $base-font-family: "helvetica neue", helvetica, arial, sans-serif;
 $headline-font-family: "helvetica neue", helvetica, arial, sans-serif;
@@ -40,4 +41,9 @@ $base-line-height: 1.231;
 
 // Content partials (article, lists, ...)
 
-//@import "partials/xyz";
+@import "partials/about";
+@import "partials/contact";
+@import "partials/goodies";
+@import "partials/guestbook";
+@import "partials/home";
+@import "partials/portfolio";
