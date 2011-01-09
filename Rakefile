@@ -26,6 +26,13 @@ task :build do
       file.write html
     end
   end
+  Dir.glob '**/*.php' do |file|
+    html = File.read(file)
+    File.open(file, 'w') do |file|
+      html.gsub! 'images/images', 'images'
+      file.write html
+    end
+  end
   
   # jammit
   require "jammit"

@@ -43,6 +43,7 @@ helpers do
   
   def portfolio_thumb(src, title = nil, options = {})
     request.env['REQUEST_URI'] =~ %r(^/([\w_-]+))
+    request.route =~ %r(^/([\w_-]+))
     view = $1
     thumb = "#{view}/thumbs/#{src}";
     if src =~ /\.(mov)$/
