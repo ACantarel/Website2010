@@ -1,0 +1,7 @@
+package_path: javascripts
+package_assets: <%= ENV['MM_ENV'] == 'build' ? 'on' : 'off' %>
+javascript_compressor: yui
+javascripts:
+  cantarel:
+    - build/javascripts/vendor/analytics.js
+    - build/javascripts/application.js
