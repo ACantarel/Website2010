@@ -44,7 +44,7 @@
   background: rgba(white, 0.1);
   border-color: rgba(white, 0.15);
   outline: none;
-  @include box-shadow(rgba(white, 0.1) 0 0 5px);
+  @include box-shadow(rgba(white, 0.1), 0, 0, 5px);
 }
 
 .guestbook input[name="headline"] {
@@ -77,5 +77,5 @@ button {
 button:hover {
   background: rgba(black, 0.1);
   border: 1px rgba(black, 0.15) solid;
-  @include box-shadow(rgba(white, 0.1) 0 0 5px);
+  @include box-shadow(rgba(white, 0.1), 0, 0, 5px);
 }

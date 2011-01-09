@@ -38,3 +38,40 @@ task :deploy => :build do
   puts "Deploying the site to #{production_url}"
   system("rsync -avz --delete build/ #{ssh_user}:#{production_path}")
 end
+
+desc "Creates a new blog post"
+task :blog_post, [:title] do |t, args|
+  title = args.title
+
+  slug = title.downcase
+  { 'ä' => 'ae', 'ö' => 'oe', 'ü' => 'ue', 'ß' => 'ss' }.each do |a, b|
+    slug.gsub! a, b
+  end
+  slug.gsub! /[^a-z0-9]/, '-'
+  slug.gsub! /--+/, '-'
+  slug.gsub! /^-|-$/, ''
+  
+  time = Time.now
+  dir = 'views/blog'
+  FileUtils.mkdir dir unless File.exists?(dir)
+  filename = "#{dir}/#{slug}.html.rmd"
+  
+  File.open filename, 'w' do |file|
+    file.write <<-MARKDOWN.gsub(/^      /, '')
+      <%
+        @date = Time.mktime(#{time.year}, #{time.month}, #{time.day})
+        @description = 'Insert description here (80 to 160 characters)'
+        @title = '#{title}'
+      %>
+      
+      #{title}
+      #{'=' * title.length}
+      
+      Write some nice stuff here.
+      
+    MARKDOWN
+  end
+  
+  puts "Created blog post “#{title}” at #{filename}"
+  `mate #{filename}`
+end

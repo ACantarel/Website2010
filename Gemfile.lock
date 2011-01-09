@@ -24,14 +24,12 @@ GEM
   remote: http://rubygems.org/
   specs:
     activesupport (3.0.3)
-    chunky_png (0.10.5)
     closure-compiler (0.3.3)
     coffee-script (2.1.1)
       coffee-script-source
     coffee-script-source (1.0.0)
-    compass (0.11.alpha.4)
-      chunky_png (~> 0.10.3)
-      sass (>= 3.1.0.alpha.50)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     compass-slickmap (0.4.0)
       compass (>= 0.10)
       haml (>= 3.0)
@@ -75,7 +73,7 @@ GEM
     sass (3.1.0.alpha.214)
     shotgun (0.8)
       rack (>= 1.0)
-    sinatra (1.1.2)
+    sinatra (1.2.0.a)
       rack (~> 1.1)
       tilt (~> 1.2)
     smusher (0.4.6)
@@ -103,10 +101,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass (= 0.11.alpha.4)
-  haml (= 3.1.0.alpha.147)
+  compass (~> 0.10.6)
+  haml (~> 3.1.0.alpha.147)
   html5-boilerplate (~> 0.2.6)
   jammit (~> 0.5.4)
   middleman!
   rdiscount (~> 1.6.5)
-  sass (= 3.1.0.alpha.214)
+  sass (~> 3.1.0.alpha.214)
+  sinatra (~> 1.2.0.a)

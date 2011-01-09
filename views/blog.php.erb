@@ -1,3 +1,7 @@
 <h1>blog</h1>
-      <h2>Starting early January 2011</h2>
-      <h3>Industry, 3d, photography and production related topics. Coding the last bits...</h3>
+<% blog "blog" do |post| %>
+  <h2>
+    <a href="<%= post.permalink %>" title="<%= post.description %>"><%= post.title %></a>
+  </h2>
+  <p><%= post.description %></p>
+<% end %>
