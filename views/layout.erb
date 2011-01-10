@@ -5,7 +5,8 @@
     <title>André Cantarel</title>
     <link rel="stylesheet" href="<%= asset_url('stylesheets/cantarel.css') %>">
     <script src="http://use.typekit.com/hjh2mae.js"></script>
-    <script>for(var e,l='article aside figcaption figure footer header nav section time'.split(' ');e=l.pop();document.createElement(e));try{Typekit.load()}catch(e){};onload=function(){<%= javascripts(:cantarel) %>}<%= %Q(var ol=function(){#{compress_javascript(javascript)}}) if javascript = @javascript %></script>
+    <script>for(var e,l='article aside figcaption figure footer header nav section time'.split(' ');e=l.pop();document.createElement(e));try{Typekit.load()}catch(e){};<%= %Q(var ol=function(){#{compress_javascript(javascript)}}) if javascript = @javascript %></script>
+    <%= javascripts(:cantarel) %>
   </head>
   <body class="webkit">
     <div id="page">

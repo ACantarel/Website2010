@@ -27,7 +27,6 @@ helpers do
   include BlogHelper
 
   def javascripts(*packages)
-    "var " +
     packages.map do |pack|
       if ENV['MM_ENV'] == 'build'
         asset_url(Jammit.asset_url(pack, :js)[1..-1])
@@ -37,8 +36,8 @@ helpers do
         end
       end
     end.flatten.map do |src|
-      "s=document.createElement('script');s.src='#{src}';document.getElementsByTagName('HEAD')[0].appendChild(s)"
-    end.join(';')
+      %Q(<script src="#{src}"></script>)
+    end.join("\n    ")
   end
   
   def portfolio_thumb(src, title = nil, options = {})
