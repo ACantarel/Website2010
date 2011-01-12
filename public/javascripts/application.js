@@ -29,4 +29,6 @@ $(function(){
 
   var email = ['andre', 'cantarel.de'].join('@');
   $('#email').html(email).attr('href', 'mailto:' + email);
+  
+  $.gaTracker('UA-20691819-1');
 });

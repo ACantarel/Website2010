@@ -5,7 +5,7 @@ include FileUtils
 module BlogHelper
 
   class Post
-    attr_accessor :title, :date, :permalink, :description
+    attr_accessor :title, :date, :permalink, :description, :thumb
   end
 
   def blog posts_dir = "posts", max = 9999
@@ -19,6 +19,7 @@ module BlogHelper
         post.date = extract_instance_variable(haml, :date)
         post.title = extract_instance_variable(haml, :title)
         post.description = extract_instance_variable(haml, :description)
+        post.thumb = extract_instance_variable(haml, :thumb)
         posts << post
       end
     end

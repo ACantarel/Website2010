@@ -1,7 +1,13 @@
 <h1>blog</h1>
-<% blog "blog" do |post| %>
-  <h2>
-    <a href="<%= post.permalink %>" title="<%= post.description %>"><%= post.title %></a>
-  </h2>
-  <p><%= post.description %></p>
-<% end %>
+<ol class="blog-posts">
+  <% blog "blog" do |post| %>
+    <li>
+      <a href="<%= post.permalink %>"><%= image_tag post.thumb, :alt => post.title %></a>
+      <h2>
+        <a href="<%= post.permalink %>" title="<%= post.description %>"><%= post.title %></a>
+      </h2>
+      <time><%= post.date.strftime('%A, %B %d, %Y') %></time>
+      <p><%= post.description %></p>
+    </li>
+  <% end %>
+</ol>
