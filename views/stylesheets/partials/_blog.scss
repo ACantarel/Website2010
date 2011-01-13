@@ -1,0 +1,23 @@
+.blog-posts {
+  border-bottom: 1px #4f5050 solid;
+  border-bottom-color: rgba(white, 0.05);
+  border-top: 1px #4f5050 solid;
+  border-top-color: rgba(white, 0.05);
+  padding: 40px 0;
+  li {
+    clear: both;
+  }
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+  time {
+    display: block;
+    padding-top: 10px;
+  }
+  time,
+  h2,
+  p {
+    margin-left: 220px;
+  }
+}
