@@ -11,6 +11,8 @@ Compass.add_project_configuration('compass.rb')
 set :haml, { :attr_wrapper => '"', :format => :html5 }
 
 page '/blog/*', :layout_engine => :erb
+page '/*.rss', :layout => false
+page '/*.xml', :layout => false
 
 # activate :slickmap
 activate :automatic_image_sizes

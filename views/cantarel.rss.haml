@@ -1,0 +1,18 @@
+- require 'time'
+%rss(version="2.0")
+  %channel
+    %title André Cantarel
+    %link http://www.cantrarel.de/
+    %description Portfolio of André Cantarel
+    %lastBuildDate= Time.now.rfc2822
+    %generator Middleman + Blog script by Nico Hagenburger
+    %language en
+    - blog "blog" do |post|
+      - @last_build_date = post.date if @last_build_date.nil? or @last_build_date < post.date
+      %item
+        %title&= post.title
+        %link&= 'http://www.cantarel.de/' + post.permalink
+        %description&= post.description
+        %author André Cantarel
+        %guid= post.permalink
+        %pubDate= post.date.rfc2822
