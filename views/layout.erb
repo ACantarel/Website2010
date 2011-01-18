@@ -2,7 +2,8 @@
 <html lang="en" class="<%= page_classes.gsub('_', '-').downcase %>">
   <head>
     <meta charset="utf-8">
-    <title>André Cantarel</title>
+    <title><%= "#{@title} - " if @title %>André Cantarel</title>
+    <% if @description %><meta name="description" content="<%= @description %>"><% end %>
     <link rel="stylesheet" href="<%= asset_url('stylesheets/cantarel.css') %>">
     <link href="cantarel.rss" rel="alternate" type="application/rss+xml">
     <script src="http://use.typekit.com/hjh2mae.js"></script>
