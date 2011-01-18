@@ -5,7 +5,10 @@
 %>
 
 Website 2011 is online, finally!
-======================
+================================
+
+Facelift done!
+--------------
 
 ![Blog 0001 Website2011 01](/images/blog/blog-0001_website2011_01.jpg)
 
