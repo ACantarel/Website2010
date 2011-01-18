@@ -15,6 +15,7 @@ task :build do
   # fix wrong image urls
   css = File.read('build/stylesheets/cantarel.css')
   File.open('build/stylesheets/cantarel.css', 'w') do |file|
+    css.gsub! '@charset "ASCII-8BIT";', ''
     css.gsub! '../../images', '../images'
     css.gsub! /(\.png|\.jpg)\?\d+/, '\\1'
     file.write css
