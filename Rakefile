@@ -69,6 +69,7 @@ task :blog_post, [:title] do |t, args|
         @date = Time.mktime(#{time.year}, #{time.month}, #{time.day})
         @description = 'Insert description here (80 to 160 characters)'
         @title = '#{title}'
+        @thumb = 'blog/thumbs/insert-filename-here.jpg'
       %>
       
       #{title}
