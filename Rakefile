@@ -68,8 +68,8 @@ task :blog_post, [:title] do |t, args|
     file.write <<-MARKDOWN.gsub(/^      /, '')
       <%
         @date = Time.mktime(#{time.year}, #{time.month}, #{time.day})
-        @description = 'Insert description here (80 to 160 characters)'
-        @title = '#{title}'
+        @description = %Q(Insert description here (80 to 160 characters))
+        @title = %Q(#{title})
         @thumb = 'blog/thumbs/insert-filename-here.jpg'
       %>
       
