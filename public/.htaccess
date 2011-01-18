@@ -1,23 +1,34 @@
 RewriteEngine On
 
+RewriteCond %{QUERY_STRING} ^home$
+RewriteRule ^hp2005/index.php$                  / [R=301,L]
+RewriteCond %{QUERY_STRING} ^about$
+RewriteRule ^hp2005/index.php$                  /about.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^2d-gallery$
+RewriteRule ^hp2005/index.php$             		/personalwork.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^3d-gallery$
+RewriteRule ^hp2005/index.php$             		/personalwork.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^animations-gallery$
+RewriteRule ^hp2005/index.php$     				/personalwork.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^foto-gallery$
+RewriteRule ^hp2005/index.php$           		/personalwork.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^guestbook$
+RewriteRule ^hp2005/index.php$              	/guestbook.php [R=301,L]
+RewriteCond %{QUERY_STRING} ^contact$
+RewriteRule ^hp2005/index.php$                	/contact.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^links$
+RewriteRule ^hp2005/index.php$                  /links.html [R=301,L]
+
+RewriteRule ^hp2005			                    / [R=301,L]
+
+RewriteRule ^hp2010/home$                                   / [R=301,L]
+RewriteRule ^hp2010/blog$                                   /blog.html [R=301,L]
+RewriteRule ^hp2010/commercialwork$                         /commercialwork.html [R=301,L]
+RewriteRule ^hp2010/personalwork$                           /personalwork.html [R=301,L]
+RewriteRule ^hp2010/about$                                  /about.html [R=301,L]
+RewriteRule ^hp2010/guestbook$                              /guestbook.php [R=301,L]
+RewriteRule ^hp2010/contact$                                /contact.html [R=301,L]
+RewriteRule ^hp2010/links$                                  /links.html [R=301,L]
+
 RewriteCond %{HTTP_HOST} !^www\.cantarel\.de$
 RewriteRule ^(.*)$ http://www.cantarel.de$1 [R=301,L]
-
-Redirect permanent /hp2005/index.php?seite=home                   /
-Redirect permanent /hp2005/index.php?seite=about                  /about.html
-Redirect permanent /hp2005/index.php?seite=2d-gallery             /personalwork.html
-Redirect permanent /hp2005/index.php?seite=3d-gallery             /personalwork.html
-Redirect permanent /hp2005/index.php?seite=animations-gallery     /personalwork.html
-Redirect permanent /hp2005/index.php?seite=foto-gallery           /personalwork.html
-Redirect permanent /hp2005/index.php?seite=guestbook              /guestbook.php
-Redirect permanent /hp2005/index.php?seite=contact                /contact.html
-Redirect permanent /hp2005/index.php?seite=links                  /links.html
-
-Redirect permanent /hp2010/home                                   /
-Redirect permanent /hp2010/blog                                   /blog.html
-Redirect permanent /hp2010/commercialwork                         /commercialwork.html
-Redirect permanent /hp2010/personalwork                           /personalwork.html
-Redirect permanent /hp2010/about                                  /about.html
-Redirect permanent /hp2010/guestbook                              /guestbook.php
-Redirect permanent /hp2010/contact                                /contact.html
-Redirect permanent /hp2010/links                                  /links.html
