@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="<%= page_classes.gsub('_', '-').downcase %>">
   <head>
     <meta charset="utf-8">
     <title>André Cantarel</title>
@@ -24,7 +24,13 @@
       </header>
       <article>
         <div id="content">
-          <%= yield %>
+          <% if request.url =~ %r(/blog/) %>
+            <%= partial 'social-media' %>
+            <%= yield %>
+            <%= partial 'social-media' %>
+          <% else %>
+            <%= yield %>
+          <% end %>
         </div>
       </article>
       <footer>

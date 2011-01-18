@@ -1,8 +1,7 @@
 .blog-posts {
   border-bottom: 1px #4f5050 solid;
   border-bottom-color: rgba(white, 0.05);
-  border-top: 1px #4f5050 solid;
-  border-top-color: rgba(white, 0.05);
+  margin-top: -49px;
   padding: 40px 0;
   li {
     clear: both;
@@ -19,5 +18,21 @@
   h2,
   p {
     margin-left: 220px;
+  }
+}
+
+.blog {
+  #content {
+    padding-bottom: 20px;
+  }
+  h2,
+  p {
+    margin: 1em 200px;
+  }
+  h1 {
+    border-bottom: 1px #4f5050 solid;
+    border-bottom-color: rgba(white, 0.05);
+    padding-bottom: 20px;
+    margin-bottom: 48px;
   }
 }

@@ -1,0 +1,29 @@
+.blog {
+  .social-media {
+    margin: 20px 0;
+    position: absolute;
+    left: 200px;
+    &:first-child {
+      top: 70px;
+    }
+  }
+}
+
+.social-media iframe {
+  margin: 0;
+  vertical-align: top;
+}
+
+.tweet {
+  background: #bababa;
+  color: #3b5998 !important;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  text-align: center;
+  vertical-align: top;
+  width: 48px;
+  @include border-radius(3px);
+  @include box-shadow(rgba(white, 0.5), 0, 1px, 1px, inset);
+}

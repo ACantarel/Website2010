@@ -2,6 +2,7 @@
   @date = Time.mktime(2011, 1, 18)
   @description = 'Insert description here (80 to 160 characters)'
   @title = 'Website 2011 is online, finally!'
+  @thumb = 'commercialwork/thumbs/Gustloff_v001.jpg'
 %>
 
 Website 2011 is online, finally!
