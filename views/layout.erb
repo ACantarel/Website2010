@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="<%= page_classes.gsub('_', '-').downcase %>">
+<html lang="en" class="<%= page_classes.gsub('_', '-').downcase %>" xmlns:og="http://opengraphprotocol.org/schema/">
   <head>
     <meta charset="utf-8">
     <title><%= "#{@title} - " if @title %>André Cantarel</title>
     <% if @description %><meta name="description" content="<%= @description %>"><% end %>
+    <meta property="og:site_name" content="cantarel.de">
+    <% if @thumb %><meta property="og:image" content="<%= asset_url(@thumb) %>"><% end %>
     <link rel="stylesheet" href="<%= asset_url('stylesheets/cantarel.css') %>">
     <link href="cantarel.rss" rel="alternate" type="application/rss+xml">
     <script src="http://use.typekit.com/hjh2mae.js"></script>
