@@ -1,0 +1,23 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^www\.cantarel\.de$
+RewriteRule ^(.*)$ http://www.cantarel.de$1 [R=301,L]
+
+Redirect permanent /hp2005/index.php?seite=home                   /
+Redirect permanent /hp2005/index.php?seite=about                  /about.html
+Redirect permanent /hp2005/index.php?seite=2d-gallery             /personalwork.html
+Redirect permanent /hp2005/index.php?seite=3d-gallery             /personalwork.html
+Redirect permanent /hp2005/index.php?seite=animations-gallery     /personalwork.html
+Redirect permanent /hp2005/index.php?seite=foto-gallery           /personalwork.html
+Redirect permanent /hp2005/index.php?seite=guestbook              /guestbook.php
+Redirect permanent /hp2005/index.php?seite=contact                /contact.html
+Redirect permanent /hp2005/index.php?seite=links                  /links.html
+
+Redirect permanent /hp2010/home                                   /
+Redirect permanent /hp2010/blog                                   /blog.html
+Redirect permanent /hp2010/commercialwork                         /commercialwork.html
+Redirect permanent /hp2010/personalwork                           /personalwork.html
+Redirect permanent /hp2010/about                                  /about.html
+Redirect permanent /hp2010/guestbook                              /guestbook.php
+Redirect permanent /hp2010/contact                                /contact.html
+Redirect permanent /hp2010/links                                  /links.html
