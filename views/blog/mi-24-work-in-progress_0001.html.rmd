@@ -1,6 +1,6 @@
 <%
   @date = Time.mktime(2011, 1, 18)
-  @description = 'Insert description here (80 to 160 characters)'
+  @description = 'First work in progress images of my new Mi-24'
   @title = 'MI-24 Work in Progress'
   @thumb = 'blog/thumbs/blog-0002_wip-mi-24_01.jpg'
 %>
