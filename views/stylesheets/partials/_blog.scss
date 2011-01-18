@@ -23,7 +23,15 @@
 
 .blog {
   #content {
-    padding-bottom: 50px;
+    padding-bottom: 75px;
+    &:after {
+      border-bottom: 1px #4f5050 solid;
+      border-bottom-color: rgba(white, 0.05);
+      content: " ";
+      display: block;
+      margin-top: 60px;
+      width: 1000px;
+    }
   }
   h2,
   p {

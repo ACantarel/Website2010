@@ -1,0 +1,18 @@
+dl.links {
+  border-bottom: 1px #36393A solid;
+  border-bottom: 1px rgba(white, 0.05) solid;
+  border-top: 1px #36393A solid;
+  border-top: 1px rgba(white, 0.05) solid;
+  float: left;
+  padding: 82px 0;
+  width: 50%;
+  dt,
+  dd {
+    float: left;
+    padding: 5px;
+    width: 240px;
+  }
+  dt {
+    text-align: right;
+  }
+}
