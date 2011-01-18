@@ -12,7 +12,7 @@ module BlogHelper
     dir = File.join(Dir.getwd, 'views', posts_dir)
     posts = []
     Dir["#{dir}/*.html.*"].each do |file|
-      if file =~ /\/([^\/_]+?)\.html\.(haml|rmd)/
+      if file =~ /\/([^\/]+?)\.html\.(haml|rmd)/
         haml = File.read(file)
         post = Post.new
         post.permalink = posts_dir + '/' + $1 + '.html'

@@ -1,5 +1,5 @@
 <%
-  @date = Time.mktime(2011, 1, 18)
+  @date = Time.mktime(2011, 1, 18, 14, 0, 0)
   @description = %Q(Wow it is done AND online!)
   @title = 'Website 2011 is online, finally!'
   @thumb = 'blog/thumbs/blog-0001_website2011_01.jpg'
