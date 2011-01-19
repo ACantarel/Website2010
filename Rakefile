@@ -43,8 +43,29 @@ end
 
 desc "Deploys the site to #{production_url}"
 task :deploy => :build do
+  require 'net/ssh'
+  require 'net/sftp'
+
+  password    = File.read('.password').strip
+  lastdeploy  = Time.parse(File.read('.lastdeploy'))
+  server      = 'www.cantarel.de'
+  user        = 'u43028714'
+  server_path = '/hp2011'
+
   puts "Deploying the site to #{production_url}"
-  system("rsync -avz --delete build/ #{ssh_user}:#{production_path}")
+  Net::SFTP.start server, user, :password => password do |session|
+    Dir.glob('build/**/*.*') do |file|
+      if File.ctime(file) > lastdeploy
+        server_file = file.gsub(/^build/, server_path)
+        puts "Uploading #{file} to #{server}#{server_file}"
+        session.upload! file, server_file
+      end
+    end
+  end
+
+  File.open '.lastdeploy', 'w' do |file|
+    file.write Time.now
+  end
 end
 
 desc "Creates a new blog post"
