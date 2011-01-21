@@ -3,6 +3,9 @@
   right: 30px;
   top: 28px;
   @include replace-text-with-dimensions("website/rss.png");
+  &:hover {
+    @include opacity(0.7);
+  }
 }
 
 .blog-posts {
