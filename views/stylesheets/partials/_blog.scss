@@ -1,3 +1,10 @@
+#rss {
+  position: absolute;
+  right: 30px;
+  top: 28px;
+  @include replace-text-with-dimensions("website/rss.png");
+}
+
 .blog-posts {
   margin-top: -49px;
   padding: 40px 0;
