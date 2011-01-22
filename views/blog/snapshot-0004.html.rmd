@@ -1,0 +1,13 @@
+<%
+  @date = Time.mktime(2011, 1, 22)
+  @description = %Q(Snapshot)
+  @title = %Q(Snapshot)
+  @thumb = 'blog/thumbs/blog-0007_venice_01.jpg'
+%>
+Snapshot
+========
+
+Sunset at Venice Beach
+----------------------
+
+![Blog 0006 Carrier 01](/images/blog/blog-0007_venice_01.jpg)
