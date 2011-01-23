@@ -43,6 +43,10 @@ helpers do
   end
   
   def portfolio_thumb(src, title = nil, options = {})
+    if title.is_a? Hash
+      options = title
+      title = nil
+    end
     request.env['REQUEST_URI'] =~ %r(^/([\w_-]+))
     request.route =~ %r(^/([\w_-]+))
     view = $1
