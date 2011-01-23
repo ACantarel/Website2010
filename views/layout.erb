@@ -30,6 +30,12 @@
         <div id="content">
           <% if request.url =~ %r(/blog/) %>
             <%= partial 'social-media' %>
+            <% if previous_post = previous_blog_post('blog') %>
+              <%= link_to "<", asset_url(previous_post.permalink), :class => 'previous-post' %>
+            <% end %>
+            <% if next_post = next_blog_post('blog') %>
+              <%= link_to ">", asset_url(next_post.permalink), :class => 'next-post' %>
+            <% end %>
             <%= yield %>
             <%= partial 'social-media' %>
           <% else %>

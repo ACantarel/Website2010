@@ -7,8 +7,8 @@ module BlogHelper
   class Post
     attr_accessor :title, :date, :permalink, :description, :thumb
   end
-
-  def blog posts_dir = "posts", max = 9999
+  
+  def blog_posts(posts_dir = "posts", max = 9999)
     dir = File.join(Dir.getwd, 'views', posts_dir)
     posts = []
     Dir["#{dir}/*.html.*"].each do |file|
@@ -24,13 +24,28 @@ module BlogHelper
       end
     end
     posts = posts.sort_by{ |item| item.date }.reverse[0..max - 1]
+  end
+  
+  def previous_blog_post(posts_dir = "posts")
+    posts = blog_posts(posts_dir)
+    index = posts.find_index { |p| p.permalink == request.route[1..-1] }
+    posts[index - 1] if index and index > 0
+  end
+  
+  def next_blog_post(posts_dir = "posts")
+    posts = blog_posts(posts_dir)
+    permalink = request.route[1..-1]
+    index = posts.find_index { |p| p.permalink == permalink }
+    posts[index + 1] if index and index < posts.length - 2
+  end
 
-    posts.each do |post|
+  def blog(posts_dir = "posts", max = 9999)
+    blog_posts(posts_dir, max).each do |post|
       yield post
     end
   end
 
-  def slideshare id
+  def slideshare(id)
     href = "http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=#{id}&amp;rel=0"
     params = {
       'allowFullScreen' => true,
@@ -56,7 +71,7 @@ module BlogHelper
 
 private
 
-  def extract_instance_variable haml, var
+  def extract_instance_variable(haml, var)
     if haml =~ /@#{var} ?= ?(.+)/
       eval($1)
     end

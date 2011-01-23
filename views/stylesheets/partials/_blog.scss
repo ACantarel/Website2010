@@ -52,3 +52,16 @@
     margin-bottom: 48px;
   }
 }
+
+.previous-post {
+  border-bottom: 0;
+  font-size: 25px;
+  font-weight: 200;
+  padding: 25px 20px;
+  position: absolute;
+}
+
+.next-post {
+  @extend .previous-post;
+  right: 0;
+}
