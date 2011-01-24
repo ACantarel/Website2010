@@ -51,6 +51,10 @@
   font-weight: 400;
 }
 
+.guestbook input[name="email"] {
+  display: none;
+}
+
 .guestbook input[name="headline"],
 .guestbook textarea {
   width: 912px;
