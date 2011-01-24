@@ -1,5 +1,5 @@
 <?php
-  if (isset($_POST["name"]) && isset($_POST["comment"]) && isset($_POST["headline"]) && $_POST["email"] == "")
+  if (isset($_POST["name"]) && isset($_POST["comment"]) && isset($_POST["headline"]) && isset($_POST["remail"]) && $_POST["email"] == "")
   {
     $write = fopen("data/guestbook.txt", "a");
     fwrite($write, $_POST["name"] . "\r\n");
