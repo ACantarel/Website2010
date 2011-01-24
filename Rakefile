@@ -3,10 +3,6 @@
 require "bundler"
 Bundler.setup
 
-ssh_user = "nico@hagenburger.net"
-production_url = "http://www.cantarel.net/"
-production_path = "/home/web/hagenburger/PREVIEW/cantarel"
-
 desc "Builds the site with bundler"
 task :build do
   puts "Building the site"
