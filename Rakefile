@@ -37,7 +37,7 @@ task :build do
   Jammit.packager.precache_all(File.join('.', 'build', 'javascripts'), '.')
 end
 
-desc "Deploys the site to #{production_url}"
+desc "Deploys the site to www.cantarel.de"
 task :deploy => :build do
   require 'net/ssh'
   require 'net/sftp'
@@ -48,7 +48,7 @@ task :deploy => :build do
   user        = 'u43028714'
   server_path = '/hp2011'
 
-  puts "Deploying the site to #{production_url}"
+  puts "Deploying the site to #{server}"
   Net::SFTP.start server, user, :password => password do |session|
     Dir.glob('build/**/*.*') do |file|
       if File.ctime(file) > lastdeploy
