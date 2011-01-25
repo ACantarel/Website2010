@@ -1,5 +1,13 @@
 <?php
-  if (isset($_POST["name"]) && isset($_POST["comment"]) && isset($_POST["headline"]) && isset($_POST["remail"]) && $_POST["email"] == "")
+  $no_spam =  isset($_POST["name"])
+           && isset($_POST["comment"])
+           && substr_count(strtolower($_POST["comment"]), 'www') < 3
+           && substr_count(strtolower($_POST["comment"]), 'http') < 3
+           && isset($_POST["headline"])
+           && isset($_POST["headline"])
+           && isset($_POST["remail"])
+           && (!isset($_POST["email"]) || $_POST["email"] == "");
+  if ($no_spam)
   {
     $write = fopen("data/guestbook.txt", "a");
     fwrite($write, $_POST["name"] . "\r\n");
