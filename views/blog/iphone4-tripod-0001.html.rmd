@@ -2,7 +2,7 @@
   @date = Time.mktime(2011, 1, 30)
   @description = 'DIY Iphone 4 Tripod'
   @title = 'DIY Iphone 4 Tripod'
-  @thumb = 'blog/thumbs/blog-0002_wip-mi-24_01.jpg'
+  @thumb = 'blog/thumbs/blog-0011_iphonetripod_01.jpg'
 %>
 
 DIY Iphone 4 Tripod
