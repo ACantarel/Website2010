@@ -1,0 +1,14 @@
+<%
+  @date = Time.mktime(2011, 2, 1)
+  @description = 'Photo Gallery Update: The Bright Future'
+  @title = 'Photo Gallery Update: The Bright Future'
+  @thumb = 'blog/thumbs/blog-0012_thefuture_01.jpg'
+%>
+
+The Bright Future
+=================
+
+An update of the photo gallery under Personal Work
+--------------------------------------------------
+
+![Blog 0012 Thefuture 01](/images/blog/blog-0012_thefuture_01.jpg)
