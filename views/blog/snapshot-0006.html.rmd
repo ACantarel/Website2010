@@ -1,5 +1,5 @@
 <%
-  @date = Time.mktime(2011, 2, 26)
+  @date = Time.mktime(2011, 2, 1)
   @description = %Q(Snapshot)
   @title = %Q(Snapshot)
   @thumb = 'blog/thumbs/blog-0013_formfollowsfunction_01.jpg'
