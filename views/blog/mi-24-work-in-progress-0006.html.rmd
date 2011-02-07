@@ -1,0 +1,18 @@
+<%
+  @date = Time.mktime(2011, 2, 7)
+  @description = %Q(More work in progress images of my new Mi-24)
+  @title = %Q(MI-24 Work in Progress)
+  @thumb = 'blog/thumbs/blog-0016_wip-mi-24_01.jpg'
+%>
+
+MI-24 Work in Progress
+======================
+
+Finished the thing in the front, moving on...
+------------------------------------------
+
+Not going to be a CAD model but it's enough for what I want to do :)
+
+![Blog 0016 Wip Mi 24 01](/images/blog/blog-0016_wip-mi-24_01.jpg)
+
+![Blog 0016 Wip Mi 24 02](/images/blog/blog-0016_wip-mi-24_02.jpg)
