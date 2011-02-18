@@ -1,8 +1,8 @@
 <?php
   $no_spam =  isset($_POST["name"])
            && isset($_POST["comment"])
-           && substr_count(strtolower($_POST["comment"]), 'www') < 3
-           && substr_count(strtolower($_POST["comment"]), 'http') < 3
+           && substr_count(strtolower($_POST["comment"]), 'www') < 1
+           && substr_count(strtolower($_POST["comment"]), 'http') < 1
            && isset($_POST["headline"])
            && isset($_POST["headline"])
            && isset($_POST["remail"])
@@ -10,6 +10,18 @@
   if ($no_spam)
   {
     $write = fopen("data/guestbook.txt", "a");
+    fwrite($write, $_POST["name"] . "\r\n");
+    fwrite($write, $_POST["remail"] . "\r\n");
+    fwrite($write, $_POST["website"] . "\r\n");
+    fwrite($write, $_POST["headline"] . "\r\n");
+    fwrite($write, time() . "\r\n");
+    fwrite($write, $_POST["comment"] . "\r\n");
+    fwrite($write, "#" . "\r\n");
+    fclose($write);
+  }
+  else 
+  {
+    $write = fopen("data/spam.txt", "a");
     fwrite($write, $_POST["name"] . "\r\n");
     fwrite($write, $_POST["remail"] . "\r\n");
     fwrite($write, $_POST["website"] . "\r\n");
