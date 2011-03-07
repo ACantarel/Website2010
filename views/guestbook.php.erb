@@ -7,6 +7,14 @@
            && isset($_POST["headline"])
            && isset($_POST["remail"])
            && (!isset($_POST["email"]) || $_POST["email"] == "");
+  $keywords = array(
+    'pharma', 'viagra'
+  );
+  foreach ($keywords as $keyword) {
+    if (strpos(strtolower($_POST["comment"]), $keyword) !== false) {
+      $no_spam = false;
+    }
+  }
   if ($no_spam)
   {
     $write = fopen("data/guestbook.txt", "a");
