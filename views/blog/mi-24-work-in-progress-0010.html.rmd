@@ -1,0 +1,28 @@
+<%
+  @date = Time.mktime(2011, 3, 9)
+  @description = %Q(More work in progress images of my new Mi-24)
+  @title = %Q(MI-24 Work in Progress)
+  @thumb = 'blog/thumbs/blog-0022_wip-mi-24_01.jpg'
+%>
+
+MI-24 Work in Progress
+======================
+
+Texture Shoot
+-------------
+
+After so many days of bad weather (sunshine is bad for texture shooting) we finally got the good weather! The sky was very even cloudy, almost like a white skylight in a 3d package. It took about five hours to take all the photos we needed and in the end we felt like ice cubes.
+
+There's going to be a documentation about this texture shoot soon where all the details like type of lenses, taking multi exposure photos and the process of tone mapping are explained.
+
+Me in the cold. There is actually another Mi-24 on the right so the cameras do point into the right direction :)
+![Blog 0020 Wip Mi 24 01](/images/blog/blog-0022_wip-mi-24_01.jpg)
+(Photo taken by Michael Grobe (http://www.grobe-bilder.de/grobe-bilder-blog/grobe-bilder-blog.html) )
+
+Taking some detail photos...
+![Blog 0020 Wip Mi 24 02](/images/blog/blog-0022_wip-mi-24_02.jpg)
+
+
+
+
+
