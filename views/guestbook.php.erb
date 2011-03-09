@@ -8,7 +8,7 @@
            && isset($_POST["remail"])
            && (!isset($_POST["email"]) || $_POST["email"] == "");
   $keywords = array(
-    'pharma', 'viagra'
+    'pharma', 'viagra', 'comment1', 'comment2', 'comment3', 'comment4', 'comment5', 'comment6', 'comment7', 'comment8', 'comment9', 'comment0'
   );
   foreach ($keywords as $keyword) {
     if (strpos(strtolower($_POST["comment"]), $keyword) !== false) {
