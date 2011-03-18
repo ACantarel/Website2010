@@ -1,7 +1,7 @@
 <%
   @date = Time.mktime(2011, 3, 18)
-  @description = %Q(Insert description here (80 to 160 characters))
-  @title = %Q(goodbyegermany-0001)
+  @description = %Q(Moving from Berlin to Los Angeles)
+  @title = %Q(Good Bye Germany)
   @thumb = 'blog/thumbs/blog-0025_GoodByeGermany_01.jpg'
 %>
 
