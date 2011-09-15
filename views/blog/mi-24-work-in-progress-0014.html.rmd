@@ -1,0 +1,21 @@
+<%
+  @date = Time.mktime(2011, 9, 14)
+  @description = %Q(More work in progress images of my new Mi-24)
+  @title = %Q(MI-24 Work in Progress)
+  @thumb = 'blog/thumbs/blog-0032_mi-24_01.jpg'
+%>
+
+MI-24 Work in Progress
+======================
+
+Tail Rotor Stuff
+---------------
+
+I was able to squeeze some time out of the schedule and started to work on the first version of the texture. Still a lot to do as usual.
+
+![Blog 0032 Wip Mi 24 01](/images/blog/blog-0032_mi-24_01.jpg)
+
+
+Don't forget to check out the work in progress thread at cgTalk too :)
+
+http://forums.cgsociety.org/showthread.php?f=43&t=1002286
