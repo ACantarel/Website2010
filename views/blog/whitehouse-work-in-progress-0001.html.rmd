@@ -1,0 +1,24 @@
+<%
+  @date = Time.mktime(2012, 6, 9)
+  @description = %Q(First WIP renders of the detailed White House I am modeling.)
+  @title = %Q(White House Work In Progress)
+  @thumb = 'blog/thumbs/blog-0034_Whitehouse_01.jpg'
+%>
+
+White House Work In Progress
+============================
+
+First Version of the White House
+--------------------------------
+
+Some renders of the White House I am modeling whenever there's a bit of time left over.
+I'm trying to stay as accurate as possible which can be tricky as there are not much references for certain areas.
+Westwing and Eastwing will follow...
+
+![Blog 0034 Wip White House 01](/images/blog/blog-0034_Whitehouse_01.jpg)
+
+![Blog 0034 Wip White House 01](/images/blog/blog-0034_Whitehouse_02.jpg)
+
+Hope you like it!
+
+
