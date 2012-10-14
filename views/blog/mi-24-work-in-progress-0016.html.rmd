@@ -1,0 +1,16 @@
+<%
+  @date = Time.mktime(2012, 10, 13)
+  @description = %Q(More work in progress images of my new Mi-24)
+  @title = %Q(MI-24 Work in Progress)
+  @thumb = 'blog/thumbs/blog-0037_mi-24_01.jpg'
+%>
+
+MI-24 Work in Progress
+======================
+
+Bits and Pieces
+---------------
+Did the engine's intakes, some rockets for the pods and finally started blocking and modeling the rotor. I think I understood how the whole thing works now :)
+
+![Blog 0037 Wip Mi 24 01](/images/blog/blog-0037_mi-24_01.jpg)
+
