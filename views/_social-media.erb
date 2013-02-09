@@ -1,5 +1,6 @@
 <%
   url = request.url.gsub(%r(http://localhost.+?/), 'http://www.cantarel.de/')
+  url = url.gsub(%r(http://example.org/), 'http://www.cantarel.de/')
 %>
 <div class="social-media">
   <a href="http://twitter.com/share?url=<%= url %>" target="_blank" class="tweet">Tweet</a>
