@@ -1,5 +1,5 @@
 <%
-  @date = Time.mktime(2013, 2, 8)
+  @date = Time.mktime(2013, 2, 9)
   @description = %Q(More WIP renders of the detailed White House I am working on.)
   @title = %Q(White House Work In Progress)
   @thumb = 'blog/thumbs/blog-0040_Whitehouse_01.jpg'
@@ -11,7 +11,7 @@ White House Work In Progress
 White House Details
 --------------------
 
-More and more details thrown in, each one ate up quite some research time but soon it's going to be done finally!
+Added some more overall details.
 
 ![Blog 0040 Wip White House 03](/images/blog/blog-0040_Whitehouse_01.jpg)
 
