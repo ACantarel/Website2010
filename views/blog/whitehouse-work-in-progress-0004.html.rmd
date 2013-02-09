@@ -1,0 +1,20 @@
+<%
+  @date = Time.mktime(2013, 2, 8)
+  @description = %Q(Insert description here (80 to 160 characters))
+  @title = %Q(White House Work In Progress)
+  @thumb = 'blog/thumbs/blog-0040_Whitehouse_01.jpg'
+%>
+
+White House Work In Progress
+============================
+
+White House Details
+--------------------
+
+More and more details thrown in, each one ate up quite some research time but soon it's going to be done!
+
+![Blog 0040 Wip White House 03](/images/blog/blog-0040_Whitehouse_01.jpg)
+
+
+Hope you like it!
+www.cantarel.de
