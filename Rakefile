@@ -6,8 +6,8 @@ Bundler.setup
 desc "Builds the site with bundler"
 task :build do
   puts "Building the site"
-  system "bundle exec mm-build"
-  
+  system "bundle exec middleman build"
+
   # fix wrong image urls
   css = File.read('build/stylesheets/cantarel.css')
   File.open('build/stylesheets/cantarel.css', 'w') do |file|
@@ -30,11 +30,6 @@ task :build do
       file.write html
     end
   end
-  
-  # jammit
-  require "jammit"
-  Jammit.load_configuration('assets.yml')
-  Jammit.packager.precache_all(File.join('.', 'build', 'javascripts'), '.')
 end
 
 desc "Deploys the site to www.cantarel.de"
@@ -75,12 +70,12 @@ task :blog_post, [:title] do |t, args|
   slug.gsub! /[^a-z0-9]/, '-'
   slug.gsub! /--+/, '-'
   slug.gsub! /^-|-$/, ''
-  
+
   time = Time.now
-  dir = 'views/blog'
+  dir = 'source/blog'
   FileUtils.mkdir dir unless File.exists?(dir)
   filename = "#{dir}/#{slug}.html.rmd"
-  
+
   File.open filename, 'w' do |file|
     file.write <<-MARKDOWN.gsub(/^      /, '')
       <%
@@ -89,15 +84,15 @@ task :blog_post, [:title] do |t, args|
         @title = %Q(#{title})
         @thumb = 'blog/thumbs/insert-filename-here.jpg'
       %>
-      
+
       #{title}
       #{'=' * title.length}
-      
+
       Write some nice stuff here.
-      
+
     MARKDOWN
   end
-  
+
   puts "Created blog post “#{title}” at #{filename}"
   `mate #{filename}`
 end
