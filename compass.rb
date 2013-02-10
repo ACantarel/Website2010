@@ -1,4 +1,4 @@
 require 'bundler'
 Bundler.setup
 
-require 'html5-boilerplate'
+require 'compass-h5bp'

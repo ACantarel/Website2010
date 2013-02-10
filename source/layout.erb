@@ -10,7 +10,7 @@
     <link href="cantarel.rss" rel="alternate" type="application/rss+xml">
     <script src="http://use.typekit.com/hjh2mae.js"></script>
     <script>for(var e,l='article aside figcaption figure footer header nav section time'.split(' ');e=l.pop();document.createElement(e));try{Typekit.load()}catch(e){};<%= %Q(var ol=function(){#{compress_javascript(javascript)}}) if javascript = @javascript %></script>
-    <%= javascripts(:cantarel) %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body class="webkit">
     <div id="page">
@@ -44,7 +44,7 @@
         </div>
       </article>
       <footer>
-      
+
       </footer>
     </div>
   </body>
