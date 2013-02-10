@@ -1,7 +1,7 @@
 <%
   @date = Time.mktime(2012, 12, 30)
   @description = %Q(More work in progress images of my new Mi-24)
-  @title = %Q(MI-24 Work in Progress)www.cantarel.de
+  @title = %Q(MI-24 Work in Progress)
   @thumb = 'blog/thumbs/blog-0039_mi-24_01.jpg'
 %>
 
