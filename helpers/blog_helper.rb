@@ -7,9 +7,9 @@ module BlogHelper
   class Post
     attr_accessor :title, :date, :permalink, :description, :thumb
   end
-  
+
   def blog_posts(posts_dir = "posts", max = 9999)
-    dir = File.join(Dir.getwd, 'views', posts_dir)
+    dir = File.join(Dir.getwd, 'source', posts_dir)
     posts = []
     Dir["#{dir}/*.html.*"].each do |file|
       if file =~ /\/([^\/]+?)\.html\.(haml|rmd)/
@@ -25,13 +25,13 @@ module BlogHelper
     end
     posts = posts.sort_by{ |item| item.date }.reverse[0..max - 1]
   end
-  
+
   def previous_blog_post(posts_dir = "posts")
     posts = blog_posts(posts_dir)
     index = posts.find_index { |p| p.permalink == request.route[1..-1] }
     posts[index - 1] if index and index > 0
   end
-  
+
   def next_blog_post(posts_dir = "posts")
     posts = blog_posts(posts_dir)
     permalink = request.route[1..-1]
@@ -55,14 +55,14 @@ module BlogHelper
     embed = tag(:embed, :src => href, :type => 'application/x-shockwave-flash', :width => 420, :height => 360)
     %Q(<figure class="slideshare"><div><object>#{params}#{embed}</object></div></figure>)
   end
-  
+
   def figure src, alt = nil
     %Q(<figure>) +
     %Q(<img src="#{src}" alt="#{alt || src.gsub('-', ' ').gsub(/\.\w+$/, '')}">) +
     (alt ? %Q(<figcaption>#{alt}</figcaption>) : '') +
     %Q(</figure>)
   end
-  
+
   def article_img src, alt = nil
     %Q(<div class="image">) +
     %Q(<img src="#{src}" alt="#{alt || src.gsub('-', ' ').gsub(/\.\w+$/, '')}">) +

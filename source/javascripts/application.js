@@ -1,3 +1,6 @@
+//= require ./vendor/jquery
+//= require_tree .
+
 $(function(){
   $('.thumbnails a[class!=quicktime]').fancybox({
     overlayOpacity: 0.8,
@@ -29,6 +32,6 @@ $(function(){
 
   var email = ['andre', 'cantarel.de'].join('@');
   $('#email').html(email).attr('href', 'mailto:' + email);
-  
+
   $.gaTracker('UA-20691819-1');
 });

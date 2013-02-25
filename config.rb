@@ -1,11 +1,7 @@
 require 'bundler'
 Bundler.setup
 
-require "jammit"
-Jammit.load_configuration('assets.yml')
-
-require 'compass'
-Compass.add_project_configuration('compass.rb')
+::Compass.add_project_configuration('compass.rb')
 
 ::Compass::configuration.asset_cache_buster = :none
 set :haml, { :attr_wrapper => '"', :format => :html5 }
@@ -19,7 +15,7 @@ activate :automatic_image_sizes
 
 configure :build do
   activate :minify_css
-  activate :smush_pngs
+  activate :minify_javascript
   activate :cache_buster
   activate :relative_assets
 end
@@ -28,27 +24,12 @@ require File.join(Dir.getwd, 'helpers', 'blog_helper')
 helpers do
   include BlogHelper
 
-  def javascripts(*packages)
-    packages.map do |pack|
-      if ENV['MM_ENV'] == 'build'
-        asset_url(Jammit.asset_url(pack, :js)[1..-1])
-      else
-        Jammit.packager.individual_urls(pack.to_sym, :js).map do |file|
-          asset_url(file.gsub(%r(^.*?build/), asset_url('')))
-        end
-      end
-    end.flatten.map do |src|
-      %Q(<script src="#{src}"></script>)
-    end.join("\n    ")
-  end
-  
   def portfolio_thumb(src, title = nil, options = {})
     if title.is_a? Hash
       options = title
       title = nil
     end
-    request.env['REQUEST_URI'] =~ %r(^/([\w_-]+))
-    request.route =~ %r(^/([\w_-]+))
+    request.path =~ %r(^([\w_\-]+)\.html$)
     view = $1
     thumb = "#{view}/thumbs/#{src}";
     if src =~ /\.(mov)$/
@@ -62,6 +43,7 @@ helpers do
   end
 end
 
+require 'minisyntax'
 require 'tilt'
 require 'erb'
 require 'compass'
@@ -77,7 +59,7 @@ module ::Tilt
       # filter CSS and JavaScript
       @data.gsub! %r(^<style type="text/s?css">(.+?)</style>$)m do
         css = %Q(@import "compass"; #{$1})
-        sass_options = Compass.sass_engine_options
+        sass_options = ::Compass.configuration.to_sass_engine_options
         sass_options.merge! :syntax => :scss, :style => :compressed
         css = Sass::Engine.new(css, sass_options).render
         scope.instance_eval("@css ||= ''\n@css << %q(#{css})", eval_file, 1)
@@ -97,7 +79,22 @@ module ::Tilt
       md.filter_html = false
       md.filter_styles = false
       html = md.to_html
-      
+
+      # syntax highlighter
+      html.gsub! %r(<code>(.+?)</code>)m do
+        code = $1
+        if code =~ /^##+\s*([-_\w\+ ]+)[\s#]*(\n|&#x000A;|$)/i
+          lang = $1
+          code.sub! /^##+\s*([-_\w\+ ]+)[\s#]*(\n|&#x000A;|$)/i, ''
+          #code.gsub! '&amp;', '&'
+          code = MiniSyntax.highlight(code, lang)
+          #code.gsub! '&', '&amp;'
+          #code.gsub! /&amp;(\w+;)/, '&\\1'
+        end
+        code.gsub! "\n", '&#x000A;'
+        %Q(<code>#{code}</code>)
+      end
+
       # allow <dl>s (not implemented in RDiscount)
       html.gsub! %r(<p>(.+?)\n:\s+(.+?)</p>), "  <dt>\\1</dt>\n  <dd>\\2</dd>"
       html.gsub! %r((</(p|div|figure|h1|h2|table|pre)>\n+)  <dt>)m, "\\1<dl>\n  <dt>"
@@ -112,16 +109,21 @@ module ::Tilt
         text = $2
         "<h2 id=\"#{ $1.gsub('_', '-') }\">#{ text }</h2>"
       end
+      html.gsub! %r(<h2>(.+?)</h2>) do
+        headline = $1
+        id = headline.gsub(/<.+?>/, '').gsub(/\(.+?\)/, '').gsub('Update:', '').gsub(/^\d+\. /, '').strip
+        %Q(<h2 id="#{id}">#{headline}</h2>)
+      end
       html.gsub! /<li>/, '  \\0'
       html.gsub! " style='text-align: left;'", ''
       html.gsub! /<(\w+)( (\w+)='(.+?)')>/ do
         "<#{ $1 }#{ $2.gsub('\'', '"') }>"
       end
       html.gsub! /<img(.+?) ?\/>/, '<img\\1>'
-      
+
       # fix image URLs
       html.gsub! 'images/images', 'images'
-      
+
       html
     end
 
@@ -135,3 +137,4 @@ module ::Tilt
     register ext, MdErbTemplate
   end
 end
+

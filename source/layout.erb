@@ -10,20 +10,20 @@
     <link href="cantarel.rss" rel="alternate" type="application/rss+xml">
     <script src="http://use.typekit.com/hjh2mae.js"></script>
     <script>for(var e,l='article aside figcaption figure footer header nav section time'.split(' ');e=l.pop();document.createElement(e));try{Typekit.load()}catch(e){};<%= %Q(var ol=function(){#{compress_javascript(javascript)}}) if javascript = @javascript %></script>
-    <%= javascripts(:cantarel) %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body class="webkit">
     <div id="page">
       <header>
         <nav>
-          <%= link_to("Home", asset_url(".")) %>
-          <%= link_to("Blog", asset_url("blog.html")) %>
-          <%= link_to("Commercial Work", asset_url("commercialwork.html")) %>
-          <%= link_to("Personal Work", asset_url("personalwork.html")) %>
-          <%= link_to("About", asset_url("about.html")) %>
-          <%= link_to("Guestbook", asset_url("guestbook.php")) %>
-          <%= link_to("Contact", asset_url("contact.html")) %>
-          <%= link_to("Links", asset_url("links.html")) %>
+          <%= link_to("Home", "/") %>
+          <%= link_to("Blog", "/blog.html") %>
+          <%= link_to("Commercial Work", "/commercialwork.html") %>
+          <%= link_to("Personal Work", "/personalwork.html") %>
+          <%= link_to("About", "/about.html") %>
+          <%= link_to("Guestbook", "/guestbook.php") %>
+          <%= link_to("Contact", "/contact.html") %>
+          <%= link_to("Links", "/links.html") %>
         </nav>
       </header>
       <article>
@@ -44,7 +44,7 @@
         </div>
       </article>
       <footer>
-      
+
       </footer>
     </div>
   </body>

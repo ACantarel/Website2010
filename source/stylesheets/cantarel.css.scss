@@ -1,7 +1,7 @@
 // Frameworks
 
 @import "compass";
-@import "html5-boilerplate";
+@import "compass/reset";
 
 // External plugins e. g. jQuery plugins
 
@@ -23,9 +23,6 @@ $large-font-size: 20px;
 $x-large-font-size: 30px;
 $base-line-height: 1.231;
 
-// HTML5 boilerplate
-
-@include html5-boilerplate;
 
 // Global styles used all over the website
 // e. g. tags without classes like h1, h2, a, button, form elements, ...
