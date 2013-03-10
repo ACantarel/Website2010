@@ -84,7 +84,6 @@ GEM
     rb-fsevent (0.9.3)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
-    rdiscount (2.0.7)
     sass (3.2.5)
     sinatra (1.3.4)
       rack (~> 1.4)
@@ -119,6 +118,5 @@ DEPENDENCIES
   net-scp
   net-sftp
   net-ssh
-  rdiscount
   sass
   sinatra
