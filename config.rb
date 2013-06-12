@@ -12,6 +12,7 @@ page '/*.xml', :layout => false
 
 # activate :slickmap
 activate :automatic_image_sizes
+activate :sprockets
 
 configure :build do
   activate :minify_css
@@ -47,6 +48,8 @@ require 'minisyntax'
 require 'tilt'
 require 'erb'
 require 'compass'
+require 'sprockets'
+require 'rdiscount'
 module ::Tilt
   class MdErbTemplate < RDiscountTemplate
     def prepare
@@ -134,7 +137,9 @@ module ::Tilt
     end
   end
   %w(mderb rmd).each do |ext|
-    register ext, MdErbTemplate
+    ::Sprockets.register_engine ext, MdErbTemplate
+    ::Tilt.register ext, MdErbTemplate
+    ::Tilt.prefer MdErbTemplate
   end
 end
 
