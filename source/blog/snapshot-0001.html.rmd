@@ -8,10 +8,10 @@
 Snapshot
 ========
 
-Cold Mood
+...
 ---------
 
-A snapshot of my girlfriend freezing in the cold breeze on Brooklyn Bridge.
+...
 
 ![Blog 0003 Photo Steffi 01](/images/blog/blog-0003_photo-steffi_01.jpg)
 
