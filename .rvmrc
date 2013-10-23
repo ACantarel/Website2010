@@ -1,1 +1,1 @@
-rvm --create use 2.0.0
+rvm --create use 1.9.3-p429@middleman
