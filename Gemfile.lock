@@ -15,6 +15,8 @@ GEM
       sass (~> 3.1)
     compass-h5bp (0.1.0)
       compass
+    compass-placeholders (1.0.0.rc.2)
+      compass
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.0)
@@ -107,6 +109,7 @@ PLATFORMS
 DEPENDENCIES
   compass
   compass-h5bp
+  compass-placeholders
   haml
   middleman (~> 3)
   middleman-blog

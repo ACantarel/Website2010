@@ -1,15 +1,18 @@
 #email {
-  border-bottom: 1px #4f5050 solid;
-  border-bottom-color: rgba(white, 0.05);
-  border-top: 1px #4f5050 solid;
-  border-top-color: rgba(white, 0.05);
-  display: block;
-  margin: 0;
-  padding: 186px 0;
+  line-height: 30px;
+  left: 0;
+  margin: -15px 0;
+  position: absolute;
+  text-align: center;
   text-transform: none;
+  top: 50%;
+  width: 100%;
 }
 
 #imprint {
-  margin: 32px 0 0;
+  bottom: 110px;
+  margin: 0;
+  position: absolute;
   text-align: center;
+  width: 100%;
 }

@@ -1,35 +1,33 @@
 header {
-  background: image-url("website/page.png") 0 -90px;
+  background: #000000;
   height: 80px;
+  left: 0;
   padding: 10px 10px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 
 nav {
   display: table;
-  font-size: 10px;
-  line-height: 15px;
-  margin: 65px 40px 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 60px auto 0;
+  max-width: 1280px;
   text-align: justify;
-  width: 920px;
+  width: 100%;
+  @include display-box;
+  @include box-pack(justify);
 }
 
 nav a {
   color: #464646 !important;
-  display: table-cell;
-  padding: 0 11px;
+  display: block;
   text-align: center;
   text-transform: uppercase;
-  width: 1px;
-}
-
-nav a:first-child {
-  text-align: left;
-  padding: 0;
-}
-
-nav a:last-child {
-  text-align: right;
-  padding: 0;
+  white-space: nowrap;
+  @include box-flex(1);
 }
 
 nav a:hover,
@@ -38,29 +36,31 @@ nav a.current {
 }
 
 html {
-  background: image-url("website/background.jpg") center top;
+  background: image-url("website/content.jpg") #1d1e21 no-repeat fixed;
+  height: 100%;
+  @include background-size(fixed);
 }
 
 html {
   overflow-y: scroll;
 }
 
-#page  {
-  margin: 100px auto;
-  width: 1020px;
+body {
+  @extend %box-sizing-border-box;
+  min-height: 100%;
+  padding: 80px 0;
 }
 
 footer {
-  background: image-url("website/page.png");
-  height: 80px;
-  padding: 0 10px 10px;
+  @extend header;
+  bottom: 0;
+  top: auto;
 }
 
 article {
-  background: image-url("website/page.png") right center;
-  height: 1%;
-  min-height: 560px;
-  padding: 0 10px;
+  padding: 80px 0;
+  min-height: 100%;
+  @include box-sizing(border-box);
 }
 
 article:after {
@@ -69,20 +69,6 @@ article:after {
   display: block;
   height: 0;
   visibility: hidden;
-}
-
-#content {
-  background: image-url("website/content.jpg") #1d1e21 no-repeat;
-  float: left;
-  min-height: 560px;
-  position: relative;
-  width: 100%;
-}
-
-#homecontent {
-  float: left;
-  min-height: 560px;
-  width: 100%;
 }
 
 li {

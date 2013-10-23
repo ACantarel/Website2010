@@ -13,39 +13,33 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body class="webkit">
-    <div id="page">
-      <header>
-        <nav>
-          <%= link_to("Home", "/") %>
-          <%= link_to("Blog", "/blog.html") %>
-          <%= link_to("Commercial Work", "/commercialwork.html") %>
-          <%= link_to("Personal Work", "/personalwork.html") %>
-          <%= link_to("About", "/about.html") %>
-          <%= link_to("Guestbook", "/guestbook.php") %>
-          <%= link_to("Contact", "/contact.html") %>
-          <%= link_to("Links", "/links.html") %>
-        </nav>
-      </header>
-      <article>
-        <div id="content">
-          <% if request.url =~ %r(/blog/) %>
-            <%= partial 'social-media' %>
-            <% if previous_post = previous_blog_post('blog') %>
-              <%= link_to "<", asset_url(previous_post.permalink), :class => 'previous-post' %>
-            <% end %>
-            <% if next_post = next_blog_post('blog') %>
-              <%= link_to ">", asset_url(next_post.permalink), :class => 'next-post' %>
-            <% end %>
-            <%= yield %>
-            <%= partial 'social-media' %>
-          <% else %>
-            <%= yield %>
-          <% end %>
-        </div>
-      </article>
-      <footer>
+    <header>
+      <nav>
+        <%= link_to("Home", "/") %>
+        <%= link_to("Blog", "/blog.html") %>
+        <%= link_to("Commercial Work", "/commercialwork.html") %>
+        <%= link_to("Personal Work", "/personalwork.html") %>
+        <%= link_to("About", "/about.html") %>
+        <%= link_to("Guestbook", "/guestbook.php") %>
+        <%= link_to("Contact", "/contact.html") %>
+        <%= link_to("Links", "/links.html") %>
+      </nav>
+    </header>
+    <% if request.url =~ %r(/blog/) %>
+      <%= partial 'social-media' %>
+      <% if previous_post = previous_blog_post('blog') %>
+        <%= link_to "<", asset_url(previous_post.permalink), :class => 'previous-post' %>
+      <% end %>
+      <% if next_post = next_blog_post('blog') %>
+        <%= link_to ">", asset_url(next_post.permalink), :class => 'next-post' %>
+      <% end %>
+      <%= yield %>
+      <%= partial 'social-media' %>
+    <% else %>
+      <%= yield %>
+    <% end %>
+    <footer>
 
-      </footer>
-    </div>
+    </footer>
   </body>
 </html>
