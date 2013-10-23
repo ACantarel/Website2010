@@ -1,0 +1,29 @@
+---
+description: "First work in progress images of my new Mi-24"
+title:       "MI-24 Work in Progress"
+thumb:       "blog/thumbs/blog-0002_wip-mi-24_01.jpg"
+---
+
+MI-24 Work in Progress
+======================
+
+Started with a new helicopter
+-----------------------------
+
+The first work in progress pictures of my new personal project I'm trying to do in my little spare time: Mi-24
+It's the famous russian helicopter which is unique in it's design.
+I started with the canopy which seems to be the most tricky part of the entire helicopter. So many weird shapes, everything is kind of a-symmetrical. Getting my head around it took quite some research time.
+
+Side view:
+
+![Blog 0002 Wip Mi 24 01](/images/blog/blog-0002_wip-mi-24_01.jpg)
+
+Some interior stuff started:
+
+![Blog 0002 Wip Mi 24 02](/images/blog/blog-0002_wip-mi-24_02.jpg)
+
+Front view, what a bubble:
+
+![Blog 0002 Wip Mi 24 02](/images/blog/blog-0002_wip-mi-24_03.jpg)
+
+More progress soon!

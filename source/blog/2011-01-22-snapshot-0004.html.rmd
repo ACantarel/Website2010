@@ -1,0 +1,13 @@
+---
+description: "Snapshot"
+title:       "Snapshot"
+thumb:       "blog/thumbs/blog-0007_venice_01.jpg"
+---
+
+Snapshot
+========
+
+Sunset at Venice Beach
+----------------------
+
+![Blog 0006 Carrier 01](/images/blog/blog-0007_venice_01.jpg)

@@ -1,0 +1,13 @@
+---
+description: "Snapshot"
+title:       "Snapshot"
+thumb:       "blog/thumbs/blog-0013_formfollowsfunction_01.jpg"
+---
+
+Snapshot
+========
+
+Form-Follows-Function
+---------------------
+
+![Blog 0013 Formfollowsfunction 01](/images/blog/blog-0013_formfollowsfunction_01.jpg)

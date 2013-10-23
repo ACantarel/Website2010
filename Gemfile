@@ -10,5 +10,6 @@ gem 'net-sftp'
 gem 'net-scp'
 gem 'minisyntax'
 gem 'middleman-sprockets'
+gem 'middleman-blog'
 gem 'rdiscount'
 

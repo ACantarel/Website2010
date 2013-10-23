@@ -7,12 +7,12 @@
     %lastBuildDate= Time.now.rfc2822
     %generator Middleman + Blog script by Nico Hagenburger
     %language en
-    - blog "blog" do |post|
+    - blog.articles.each do |post|
       - @last_build_date = post.date if @last_build_date.nil? or @last_build_date < post.date
       %item
         %title&= post.title
-        %link&= 'http://www.cantarel.de/' + post.permalink
-        %description&= post.description
+        %link&= 'http://www.cantarel.de/' + post.url
+        %description&= post.data.description
         %author André Cantarel
-        %guid= post.permalink
+        %guid= post.url
         %pubDate= post.date.rfc2822

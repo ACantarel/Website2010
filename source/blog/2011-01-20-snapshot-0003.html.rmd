@@ -1,0 +1,15 @@
+---
+description: "Snapshot"
+title:       "Snapshot"
+thumb:       "blog/thumbs/blog-0006_carrier_01.jpg"
+---
+
+Snapshot
+========
+
+Out of Service
+--------------
+
+After many decades of ploughing through the worlds oceans, it's time for retirement.
+
+![Blog 0006 Carrier 01](/images/blog/blog-0006_carrier_01.jpg)

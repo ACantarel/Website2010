@@ -1,0 +1,20 @@
+---
+description: "More work in progress images of my new Mi-24"
+title:       "MI-24 Work in Progress"
+thumb:       "blog/thumbs/blog-0030_mi-24_01.jpg"
+---
+
+MI-24 Work in Progress
+======================
+
+Almost finished the wing
+------------------------
+
+After quite a while I finally found some time to continue working on it. I picked the wing as I see it as a kind of stand alone asset. 95% of it is done, just minor details are still missing and a few parts have UVs already. I hope soon I can start to slap some textures on it :)
+
+
+![Blog 0030 Wip Mi 24 01](/images/blog/blog-0030_mi-24_01.jpg)
+
+Some close ups...
+
+![Blog 0030 Wip Mi 24 02](/images/blog/blog-0030_mi-24_02.jpg)
