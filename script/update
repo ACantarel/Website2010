@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "`gem list bundler`" ]
+then
+  gem install --no-ri --no-rdoc bundler
+fi
+bundle
+
