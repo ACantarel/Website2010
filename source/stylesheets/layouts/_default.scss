@@ -1,3 +1,17 @@
+html {
+  background-image: image-url("website/background.jpg");
+}
+
+body {
+  background: image-url("website/content.jpg") #1d1e21 no-repeat fixed;
+  margin: 50px auto;
+  min-height: 700px;
+  position: relative;
+  width: 1000px;
+  @include background-size(fixed);
+  @include box-shadow(rgba(black, 0.5) 0 1px 10px);
+}
+
 header {
   background: #000000;
   height: 80px;
@@ -36,19 +50,11 @@ nav a.current {
 }
 
 html {
-  background: image-url("website/content.jpg") #1d1e21 no-repeat fixed;
   height: 100%;
-  @include background-size(fixed);
 }
 
 html {
   overflow-y: scroll;
-}
-
-body {
-  @extend %box-sizing-border-box;
-  min-height: 100%;
-  padding: 80px 0;
 }
 
 footer {
