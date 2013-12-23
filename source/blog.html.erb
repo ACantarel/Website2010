@@ -2,13 +2,9 @@
 <h1>blog</h1>
 <ol class="blog-posts">
   <% blog.articles.each do |post| %>
-    <li>
-      <a href="<%= post.url %>"><%= image_tag post.data.thumb, :alt => post.title %></a>
-      <h2>
-        <a href="<%= post.url %>" title="<%= post.data.description %>"><%= post.title %></a>
-      </h2>
+    <li id="<%= post.slug %>">
       <time><%= post.date.strftime('%A, %B %d, %Y') %></time>
-      <p><%= post.data.description %></p>
+      <%= post.body %>
     </li>
   <% end %>
 </ol>

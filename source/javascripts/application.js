@@ -34,4 +34,15 @@ $(function(){
   $('#email').html(email).attr('href', 'mailto:' + email);
 
   $.gaTracker('UA-20691819-1');
+
+  if ($('.blog-posts').length) {
+    $(window).scroll(function() {
+      var hash = '#' + $('.blog-posts li:in-viewport:first').attr('id');
+      if (location.hash != hash) {
+        history.replaceState('', '', hash);
+      }
+    });
+  }
 });
+
+
