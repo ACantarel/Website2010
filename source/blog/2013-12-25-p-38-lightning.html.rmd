@@ -1,0 +1,13 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "P-38 Lightning"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+P-38 Lightning
+==============
+
+
+Elegance in Aviation
+
+![Blog 0043 p 38 01](/images/blog/blog-0044_p38_01.jpg)
