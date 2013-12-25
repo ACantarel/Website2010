@@ -36,6 +36,7 @@ desc "Deploys the site to www.cantarel.de"
 task :deploy => :build do
   require 'net/ssh'
   require 'net/sftp'
+  require 'time'
 
   password    = File.read('.password').strip
   lastdeploy  = Time.parse(File.read('.lastdeploy'))
