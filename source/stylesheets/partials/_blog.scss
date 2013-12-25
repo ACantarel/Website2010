@@ -9,13 +9,16 @@
 }
 
 .blog-posts {
-  margin-top: -49px;
-  padding: 40px 0;
+  padding: 40px 0 80px;
   li {
     clear: both;
+    margin: 30px 0;
+    @include clearfix;
+    + li {
+      margin-top: 90px;
+    }
   }
   img {
-    float: left;
     margin-right: 20px;
   }
   time {
@@ -25,7 +28,8 @@
   time,
   h2,
   p {
-    margin-left: 220px;
+    margin: 0.75em 200px;
+    text-align: center;
   }
 }
 
@@ -44,6 +48,9 @@
   h2,
   p {
     margin: 1em 200px;
+  }
+  p img {
+    margin: 0 -200px;
   }
   h1 {
     border-bottom: 1px #4f5050 solid;

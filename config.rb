@@ -6,13 +6,18 @@ Bundler.setup
 ::Compass::configuration.asset_cache_buster = :none
 set :haml, { :attr_wrapper => '"', :format => :html5 }
 
-page '/blog/*', :layout_engine => :erb
+page '/blog/*', :layout_engine => :erb, :layout => 'layout'
 page '/*.rss', :layout => false
 page '/*.xml', :layout => false
 
 # activate :slickmap
 activate :automatic_image_sizes
 activate :sprockets
+
+activate :blog do |blog|
+  blog.permalink = ':title.html'
+  blog.prefix = 'blog'
+end
 
 configure :build do
   activate :minify_css

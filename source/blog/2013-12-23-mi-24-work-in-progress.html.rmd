@@ -1,0 +1,23 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "Mi-24 Work In Progress"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+MI-24 Work in Progress
+======================
+
+Progress on the textures.
+----------
+I worked a lot on UVs and textures. Still a long way to go. 7 8K maps so far. Only diffuse and bump at the moment.
+
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_01.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_02.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_03.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_04.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_05.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_06.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_07.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_08.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_09.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0043_mi24_10.jpg)

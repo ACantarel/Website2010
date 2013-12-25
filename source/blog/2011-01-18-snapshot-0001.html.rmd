@@ -1,0 +1,15 @@
+---
+description: "Snapshot"
+title:       "Snapshot"
+thumb:       "blog/thumbs/blog-0003_photo-steffi_01.jpg"
+---
+
+Snapshot
+========
+
+...
+---------
+
+...
+
+![Blog 0003 Photo Steffi 01](/images/blog/blog-0003_photo-steffi_01.jpg)

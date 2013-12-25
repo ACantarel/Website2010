@@ -1,0 +1,17 @@
+---
+description: "3D Concept Rendering"
+title:       "3D Concept Rendering"
+thumb:       "blog/thumbs/blog-0021_ec135-concept_01.jpg"
+---
+
+3D Concept Rendering
+====================
+
+I canceled this one, wasn't going into the right direction...
+-------------------------------------------------------------
+
+![Blog 0021 Ec135 Concept 01](/images/blog/blog-0021_ec135-concept_01.jpg)
+
+A close up in 100% resolution
+
+![Blog 0021 Ec135 Concept 02](/images/blog/blog-0021_ec135-concept_02.jpg)

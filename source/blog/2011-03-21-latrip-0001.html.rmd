@@ -1,0 +1,33 @@
+---
+description: "The trip to Los Angeles"
+title:       "Arriving in Los Angeles"
+thumb:       "blog/thumbs/blog-0026_LATrip_01.jpg"
+---
+
+Los Angeles Arrival
+===================
+
+Some snapshots of the trip to Los Angeles
+-----------------------------------------
+
+After a 23 hour trip plus some airline weirdness, we finally arrived in Los Angeles.
+
+
+Some action close to Heathrow.
+
+![Blog 0026 LATrip 01](/images/blog/blog-0026_LATrip_01.jpg)
+
+
+British flying gizmo over the famous green landscapes of Greenland.
+
+![Blog 0026 LATrip 02](/images/blog/blog-0026_LATrip_02.jpg)
+
+
+The Grid.
+
+![Blog 0026 LATrip 03](/images/blog/blog-0026_LATrip_03.jpg)
+
+
+And for the first time ever: Berlin weather over Los Angeles!
+
+![Blog 0026 LATrip 04](/images/blog/blog-0026_LATrip_04.jpg)

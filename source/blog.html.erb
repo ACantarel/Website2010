@@ -1,14 +1,10 @@
 <a href="<%= asset_url('cantarel.rss') %>" id="rss">Subscripe to my RSS feed</a>
 <h1>blog</h1>
 <ol class="blog-posts">
-  <% blog "blog" do |post| %>
-    <li>
-      <a href="<%= post.permalink %>"><%= image_tag post.thumb, :alt => post.title %></a>
-      <h2>
-        <a href="<%= post.permalink %>" title="<%= post.description %>"><%= post.title %></a>
-      </h2>
+  <% blog.articles.each do |post| %>
+    <li id="<%= post.slug %>">
       <time><%= post.date.strftime('%A, %B %d, %Y') %></time>
-      <p><%= post.description %></p>
+      <%= post.body %>
     </li>
   <% end %>
 </ol>

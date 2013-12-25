@@ -74,16 +74,15 @@ task :blog_post, [:title] do |t, args|
   time = Time.now
   dir = 'source/blog'
   FileUtils.mkdir dir unless File.exists?(dir)
-  filename = "#{dir}/#{slug}.html.rmd"
+  filename = "#{dir}/#{time.to_s[0...10]}-#{slug}.html.rmd"
 
   File.open filename, 'w' do |file|
     file.write <<-MARKDOWN.gsub(/^      /, '')
-      <%
-        @date = Time.mktime(#{time.year}, #{time.month}, #{time.day})
-        @description = %Q(Insert description here (80 to 160 characters))
-        @title = %Q(#{title})
-        @thumb = 'blog/thumbs/insert-filename-here.jpg'
-      %>
+      ---
+      description: "Insert description here (80 to 160 characters)"
+      title:       "#{title}"
+      thumb:       "blog/thumbs/insert-filename-here.jpg"
+      ---
 
       #{title}
       #{'=' * title.length}

@@ -1,13 +1,10 @@
 .home {
-  margin: 217px auto;
-  width: 244px;
-}
-
-.home h1 {
-  background: image-url("home/welcome.png");
-  height: 152px;
-  margin: 100px 0;
-  overflow: hidden;
-  text-indent: 1000px;
-  white-space: nowrap;
+  @extend %hide-text;
+  background: image-url("home/cantarel.png");
+  height: image-height("home/cantarel.png");
+  left: 50%;
+  margin: (image-height("home/cantarel.png") / -2) (image-width("home/cantarel.png") / -2);
+  position: absolute;
+  top: 50%;
+  width: image-width("home/cantarel.png");
 }

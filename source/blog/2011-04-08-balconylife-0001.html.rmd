@@ -1,0 +1,19 @@
+---
+description: "Wildlife around my balcony."
+title:       "Balcony Life"
+thumb:       "blog/thumbs/blog-0028_BlaconyLife_01.jpg"
+---
+
+Balcony Life
+============
+
+Wildlife around my balcony.
+---------------------------
+
+My new apartment in Santa Monica turned out to be surrounded by the local wildlife :)
+
+![Blog 0028 BlaconyLife 01](/images/blog/blog-0028_BlaconyLife_01.jpg)
+
+![Blog 0028 BlaconyLife 02](/images/blog/blog-0028_BlaconyLife_02.jpg)
+
+![Blog 0028 BlaconyLife 03](/images/blog/blog-0028_BlaconyLife_03.jpg)
