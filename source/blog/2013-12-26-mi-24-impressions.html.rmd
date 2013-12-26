@@ -1,0 +1,14 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "Mi-24 Impressions"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+Mi-24 Impressions
+=================
+
+A few renders of the wing.
+
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0045_mi24_01.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0045_mi24_02.jpg)
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0045_mi24_03.jpg)
