@@ -1,0 +1,13 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "Mi-24 WIP Render"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+Mi-24 WIP Render
+================
+
+
+A quick just for fun render with the unfinished helicopter.
+
+![Blog 0043 Wip Mi 24 01](/images/blog/blog-0046_mi24_01.jpg)
