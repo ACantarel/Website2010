@@ -27,7 +27,7 @@
     fwrite($write, "#" . "\r\n");
     fclose($write);
   }
-  else 
+  else
   {
     $write = fopen("data/spam.txt", "a");
     fwrite($write, $_POST["name"] . "\r\n");
@@ -39,9 +39,9 @@
     fwrite($write, "#" . "\r\n");
     fclose($write);
   }
-  function file_get_contents_utf8($fn) { 
-    $content = file_get_contents($fn); 
-    return mb_convert_encoding($content, 'ISO-8859-1', 'UTF-8'); 
+  function file_get_contents_utf8($fn) {
+    $content = file_get_contents($fn);
+    return mb_convert_encoding($content, 'ISO-8859-1', 'UTF-8');
   }
 ?>
 <div class="guestbook">
@@ -49,9 +49,8 @@
   <%= partial "guestbook_form" %>
   <ol>
     <?php
-    
       $entries = file_get_contents_utf8("data/guestbook.txt");
-      $entries = preg_split('/#(\r\n|\n|\r)/ms', "$entries");	
+      $entries = preg_split('/#(\r\n|\n|\r)/ms', "$entries");
       for ($i = count($entries) - 1; $i >= 0; $i--) {
         $entry2 = $entries[$i];
         if (strlen(trim($entry2)) != 0) {
@@ -82,3 +81,4 @@
   </ol>
   <%= partial "guestbook_form" %>
 </div>
+
