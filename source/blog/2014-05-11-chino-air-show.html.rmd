@@ -1,0 +1,21 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "Chino Air Show"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+Chino Air Show
+==============
+
+My girlfriend Catalina and I had an amazing day at the air show in Chino, CA!
+Not that I got plenty of nice aviation related photos, my girl in her 1940s outfit got plenty of visitors to turn their heads and take photos of her by themselves.
+
+Here's a small selection of the 32GB of photos I shot that day.
+
+![Blog 0052 Chino 01](/images/blog/blog-0052_Chino_01.jpg)
+![Blog 0052 Chino 02](/images/blog/blog-0052_Chino_02.jpg)
+![Blog 0052 Chino 03](/images/blog/blog-0052_Chino_03.jpg)
+![Blog 0052 Chino 04](/images/blog/blog-0052_Chino_04.jpg)
+![Blog 0052 Chino 05](/images/blog/blog-0052_Chino_05.jpg)
+![Blog 0052 Chino 06](/images/blog/blog-0052_Chino_06.jpg)
+

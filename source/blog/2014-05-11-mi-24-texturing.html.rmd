@@ -1,0 +1,15 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "Mi-24 Texturing"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+Mi-24 Texturing Progress
+================
+
+
+Finally finished the diffuse and bump map of the panels surrounding the rotor opening and the area behind the big exhaust.
+
+![Blog 0053 Wip Mi 24 01](/images/blog/blog-0053_mi24_01.jpg)
+![Blog 0053 Wip Mi 24 02](/images/blog/blog-0053_mi24_02.jpg)
+![Blog 0053 Wip Mi 24 03](/images/blog/blog-0053_mi24_03.jpg)
