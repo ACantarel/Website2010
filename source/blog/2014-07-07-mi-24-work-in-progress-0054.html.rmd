@@ -4,8 +4,14 @@ title:       "mi-24-work-in-progress-0054"
 thumb:       "blog/thumbs/insert-filename-here.jpg"
 ---
 
-mi-24-work-in-progress-0054
-===========================
+Mi-24 Texturing Progress
+================
 
-Write some nice stuff here.
 
+Got the nose section almost done, worked on some displacement for all the rivets and started the tail boom
+
+![Blog 0054 Wip Mi 24 01](/images/blog/blog-0054_mi24_01.jpg)
+![Blog 0054 Wip Mi 24 02](/images/blog/blog-0054_mi24_02.jpg)
+![Blog 0054 Wip Mi 24 03](/images/blog/blog-0054_mi24_03.jpg)
+![Blog 0054 Wip Mi 24 04](/images/blog/blog-0054_mi24_04.jpg)
+![Blog 0054 Wip Mi 24 05](/images/blog/blog-0054_mi24_05.jpg)
