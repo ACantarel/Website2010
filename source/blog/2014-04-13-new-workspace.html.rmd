@@ -1,0 +1,14 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "New Workspace"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+New Workspace
+=============
+
+Finally got my third display on the right up and running.
+I used a cheap Nvidia Quadro K600 for it as it shares the same drivers with the Quadro 4000.
+The vertical format allows me to open all tools expanded and never have to struggle with overlapping windows again.
+
+![Blog 0050 workspace 01](/images/blog/blog-0050_workplace_01.jpg)

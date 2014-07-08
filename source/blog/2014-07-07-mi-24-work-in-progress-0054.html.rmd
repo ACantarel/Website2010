@@ -1,0 +1,11 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "mi-24-work-in-progress-0054"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+mi-24-work-in-progress-0054
+===========================
+
+Write some nice stuff here.
+

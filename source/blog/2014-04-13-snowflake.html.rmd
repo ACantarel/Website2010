@@ -1,0 +1,12 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "Snowflake"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+Snowflake
+=========
+
+Just a weekend render.
+
+![Blog 0047 Wip Mi 24 01](/images/blog/blog-0048_snowflake_01.jpg)

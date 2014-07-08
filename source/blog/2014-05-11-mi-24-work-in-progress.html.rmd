@@ -1,0 +1,14 @@
+---
+description: "Insert description here (80 to 160 characters)"
+title:       "mi-24-work-in-progress"
+thumb:       "blog/thumbs/insert-filename-here.jpg"
+---
+
+Mi-24 HDR-Sets Test Render
+================
+
+
+My friend Manuel Flemming gave me a few HDRIs with backplates from his new shop at hdr-sets.com to play with.
+After a quick set up this is how the first render looked like.
+
+![Blog 0051 Wip Mi 24 01](/images/blog/blog-0051_mi24_01.jpg)
