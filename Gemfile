@@ -1,16 +1,5 @@
 source 'http://rubygems.org'
-gem 'haml'
-gem 'sass', '3.3.0.rc.2'
-gem 'compass', '1.0.0.alpha.17'
-gem 'compass-h5bp'
-gem 'compass-placeholders'
-gem 'middleman', '~> 3'
-gem 'sinatra'
+
 gem 'net-ssh'
 gem 'net-sftp'
 gem 'net-scp'
-gem 'minisyntax'
-gem 'middleman-sprockets'
-gem 'middleman-blog'
-gem 'rdiscount'
-

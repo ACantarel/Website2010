@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteRule ^$                    http://www.andrecantarel.com/                 [R=301,L]
+RewriteRule ^about.html$          http://www.andrecantarel.com/about/           [R=301,L]
+RewriteRule ^blog.html$           http://www.andrecantarel.com/blog/            [R=301,L]
+RewriteRule ^commercialwork.html$ http://www.andrecantarel.com/commercial-work/ [R=301,L]
+RewriteRule ^contact.html$        http://www.andrecantarel.com/about/           [R=301,L]
+RewriteRule ^goodies.html$        http://www.andrecantarel.com/tutorials/       [R=301,L]
+RewriteRule ^personalwork.html$   http://www.andrecantarel.com/personal-work/   [R=301,L]
+RewriteRule ^photos.html$         http://www.andrecantarel.com/photography/     [R=301,L]
+RewriteRule ^press.html$    [G]
+RewriteRule ^imprint.html$  [G]
+RewriteRule ^guestbook.php$ [G]

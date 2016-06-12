@@ -1,4 +1,0 @@
-#!/bin/bash
-
-rake blog_post["$1"]
-
